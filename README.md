@@ -69,8 +69,8 @@ npm run dev
 
 Use a browser with mobile emulator or directly on mobile if supported.
 
---
-Notes
+---
+**Notes**
 
 All data is stored in browser storage for the demo.
 
