@@ -1,73 +1,77 @@
-# Welcome to your Lovable project
+# IPX - Intelligent Participant Hub
 
-## Project info
+**Tagline:** Your complete event companion – register, plan, connect, and engage effortlessly.
 
-**URL**: https://lovable.dev/projects/5ae02a93-3cde-4c1c-95c9-062da0020b3f
+---
 
-## How can I edit this code?
+## Project Description
 
-There are several ways of editing your application.
+IPX is a **mobile-first application** designed to enhance the participant and event coordinator experience. The app allows participants to register as Students or Professionals, build personalized agendas, network with other participants, and check in seamlessly via QR code. Event coordinators can create events, manage sessions, and track attendee check-ins.  
 
-**Use Lovable**
+For demonstration purposes, the app uses **browser storage (localStorage/IndexedDB)** as the database, making it **fully functional without external paid APIs**. Optional LinkedIn login can be used to pre-fill professional registration. Additional features include **participant matching** and **gamified points** to enhance engagement.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/5ae02a93-3cde-4c1c-95c9-062da0020b3f) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## Features
 
-**Use your preferred IDE**
+### Participant Flow
+- Register as **Student** or **Professional**
+- Optional **LinkedIn login** to auto-fill registration
+- Browse event sessions
+- Build **personalized agenda**
+- QR code for check-in
+- Participant matching for networking
+- Gamified points and badges for engagement
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Event Coordinator Flow
+- Create and manage events
+- Add sessions, tracks, and speakers
+- Dashboard to view attendees and check-in status
+- QR code generation for check-in
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Technical Highlights
+- **Mobile-first responsive UI/UX**
+- Uses **browser storage** for data persistence across tabs
+- Minimal API usage for **high feasibility and scalability**
+- Fully demo-ready for hackathons
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Tech Stack
+- Frontend: Vite + React (or chosen Lovable stack)
+- Backend: Browser storage (localStorage / IndexedDB) for demonstration
+- Optional: LinkedIn OpenID Connect for professional registration pre-fill
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## Installation & Setup
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/Pythonpreran/IPX-intelligent-participant-hub.git
+cd IPX-intelligent-participant-hub
+
+```
+
+2.**Install dependencies**
+```bash
+npm install
+```
+
+
+3.**Start the development server**
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4.**Open in mobile view**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Use a browser with mobile emulator or directly on mobile if supported.
 
-**Use GitHub Codespaces**
+--
+Notes
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+All data is stored in browser storage for the demo.
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/5ae02a93-3cde-4c1c-95c9-062da0020b3f) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+No paid APIs are required to run the app.
