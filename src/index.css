@@ -1,0 +1,293 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* IPX Mobile App Design System - Professional Event Management */
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --background: 240 10% 98%;
+    --foreground: 240 10% 15%;
+
+    /* Card & Surface Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 15%;
+
+    /* Primary Brand - Professional Blue */
+    --primary: 236 72% 56%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 236 72% 66%;
+
+    /* Secondary - Elegant Purple */
+    --secondary: 262 52% 47%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Success & Gamification - Vibrant Green */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --success-glow: 142 76% 46%;
+
+    /* Warning - Professional Orange */
+    --warning: 32 95% 44%;
+    --warning-foreground: 0 0% 100%;
+
+    /* Muted & Neutral */
+    --muted: 240 6% 95%;
+    --muted-foreground: 240 5% 64%;
+
+    /* Accent - Event Highlight */
+    --accent: 336 84% 57%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 236 72% 56%;
+
+    --radius: 0.75rem;
+
+    /* Gradients - Sophisticated International Style */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--accent)));
+    --gradient-success: linear-gradient(135deg, hsl(var(--success)), hsl(var(--success-glow)));
+    --gradient-hero: linear-gradient(135deg, hsl(240 15% 10%) 0%, hsl(240 20% 15%) 25%, hsl(236 30% 20%) 50%, hsl(262 25% 18%) 75%, hsl(240 15% 12%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--muted)) 100%);
+    --gradient-mesh: radial-gradient(ellipse at top left, hsl(236 72% 56% / 0.1) 0%, transparent 50%), 
+                     radial-gradient(ellipse at top right, hsl(262 52% 47% / 0.1) 0%, transparent 50%),
+                     radial-gradient(ellipse at bottom, hsl(336 84% 57% / 0.05) 0%, transparent 50%);
+    --gradient-glass: linear-gradient(135deg, hsl(0 0% 100% / 0.1) 0%, hsl(0 0% 100% / 0.05) 100%);
+    --gradient-surface: linear-gradient(145deg, hsl(var(--background)) 0%, hsl(240 10% 96%) 100%);
+
+    /* Shadows - Modern Depth System */
+    --shadow-elegant: 0 4px 20px -2px hsl(var(--primary) / 0.1);
+    --shadow-card: 0 2px 10px -1px hsl(var(--foreground) / 0.1);
+    --shadow-glow: 0 0 30px hsl(var(--primary-glow) / 0.3);
+    --shadow-glass: 0 8px 32px hsl(0 0% 0% / 0.08);
+    --shadow-floating: 0 10px 40px -10px hsl(0 0% 0% / 0.15);
+    --shadow-soft: 0 2px 20px -4px hsl(0 0% 0% / 0.1);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 240 10% 8%;
+    --foreground: 240 5% 95%;
+
+    --card: 240 10% 12%;
+    --card-foreground: 240 5% 95%;
+
+    --popover: 240 10% 12%;
+    --popover-foreground: 240 5% 95%;
+
+    --primary: 236 72% 66%;
+    --primary-foreground: 240 10% 8%;
+    --primary-glow: 236 72% 76%;
+
+    --secondary: 262 52% 57%;
+    --secondary-foreground: 240 5% 95%;
+
+    --success: 142 76% 46%;
+    --success-foreground: 240 10% 8%;
+    --success-glow: 142 76% 56%;
+
+    --warning: 32 95% 54%;
+    --warning-foreground: 240 10% 8%;
+
+    --muted: 240 6% 20%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 336 84% 67%;
+    --accent-foreground: 240 10% 8%;
+
+    --destructive: 0 84% 70%;
+    --destructive-foreground: 240 5% 95%;
+
+    --border: 240 6% 20%;
+    --input: 240 6% 20%;
+    --ring: 236 72% 66%;
+    
+    --sidebar-background: 240 10% 8%;
+    --sidebar-foreground: 240 5% 95%;
+    --sidebar-primary: 236 72% 66%;
+    --sidebar-primary-foreground: 240 10% 8%;
+    --sidebar-accent: 240 6% 20%;
+    --sidebar-accent-foreground: 240 5% 95%;
+    --sidebar-border: 240 6% 20%;
+    --sidebar-ring: 236 72% 66%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Gradient utilities - International Professional Style */
+  .bg-gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .bg-gradient-secondary {
+    background: var(--gradient-secondary);
+  }
+  
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+    position: relative;
+  }
+  
+  .bg-gradient-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-mesh);
+    opacity: 1;
+  }
+  
+  .bg-gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .bg-gradient-surface {
+    background: var(--gradient-surface);
+  }
+  
+  .bg-glass {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(0 0% 100% / 0.1);
+  }
+
+  /* Shadow utilities - Modern Depth */
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .shadow-glass {
+    box-shadow: var(--shadow-glass);
+  }
+  
+  .shadow-floating {
+    box-shadow: var(--shadow-floating);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  /* Interactive elements - Enhanced UX */
+  .btn-hover {
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn-hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, hsl(0 0% 100% / 0.2), transparent);
+    transition: left 0.5s ease;
+  }
+  
+  .btn-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-floating);
+  }
+  
+  .btn-hover:hover::before {
+    left: 100%;
+  }
+
+  .card-interactive {
+    transition: var(--transition-smooth);
+    position: relative;
+  }
+  
+  .card-interactive:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glass);
+  }
+  
+  .card-glass {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(0 0% 100% / 0.15);
+    box-shadow: var(--shadow-glass);
+  }
+  
+  .micro-interaction {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .micro-interaction:hover {
+    transform: scale(1.02);
+  }
+  
+  .micro-interaction:active {
+    transform: scale(0.98);
+  }
+
+  /* Mobile-optimized touch targets */
+  .mobile-touch {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Gamification animations */
+  .badge-bounce {
+    animation: badge-bounce 0.6s ease-out;
+  }
+  
+  @keyframes badge-bounce {
+    0% { transform: scale(0.3) rotate(-10deg); opacity: 0; }
+    50% { transform: scale(1.1) rotate(5deg); }
+    100% { transform: scale(1) rotate(0deg); opacity: 1; }
+  }
+
+  .points-glow {
+    animation: points-glow 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes points-glow {
+    from { box-shadow: 0 0 5px hsl(var(--success-glow) / 0.3); }
+    to { box-shadow: 0 0 20px hsl(var(--success-glow) / 0.6); }
+  }
+}
